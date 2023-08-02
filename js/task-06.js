@@ -29,11 +29,11 @@ const input = document.querySelector("#validation-input");
 // console.log(input);
 // console.log(input.value.length);
 
-const isRigthLength = () => {
-    if (input.value.length === 6) {
+const isRigthLength = (e) => {
+    if (input.value.length == input.getAttribute("data-length")) {
         input.classList.add("valid");
         input.classList.remove("invalid");
-    } else if (input.value.length !== 6) {
+    } else if (input.value.length != input.getAttribute("data-length")) {
         input.classList.add("invalid");
         input.classList.remove("valid");
   }
