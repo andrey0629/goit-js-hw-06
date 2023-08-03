@@ -1,8 +1,8 @@
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}
+// function getRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215)
+//     .toString(16)
+//     .padStart(6, 0)}`;
+// }
 
 // Задание 10 (выполнять не обязательно)
 // Напиши скрипт создания и очистки коллекции элементов. Пользователь вводит количество элементов в input и нажимает кнопку Создать, после чего рендерится коллекция. При нажатии на кнопку Очистить, коллекция элементов очищается.
@@ -47,17 +47,31 @@ console.log(boxes);
 //   boxes.append(markup)
 // };
 
+const markup = `<div id="box" class="box"></div>`;
+
+
 function createBoxes(amount) {
+  const box = document.querySelector("#box");
+console.log(box);
   boxes.innerHTML += markup;
+  getRandomHexColor(box)
 };
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
 
 btnCreate.addEventListener("click", createBoxes);
 
 // const markup = boxes.insertAdjacentHTML("afterbegin", );
 
-const markup.insertAdjacentHTML("a" `<div></div>`;
-markup.classList
-markup.style.backgroundColor = 'black';
+
+
+
+// markup.classList
+// markup.style.backgroundColor = 'black';
 // markup.style.borderWidth = "1px";;
 // markup.style.width = "30px";
 // markup.style.height = "30px";
