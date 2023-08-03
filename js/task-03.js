@@ -41,7 +41,7 @@ const list = document.querySelector(".gallery");
 console.log(list);
 
 const li = images.map(image =>
-  `<li><img src="${image.url}" alt="${image.alt}" width="400px"></li>`)
+  `<li><img src="${image.url}" alt="${image.alt}" width="400px"></li>`).join("")
 
 list.insertAdjacentHTML("afterbegin", li);
 

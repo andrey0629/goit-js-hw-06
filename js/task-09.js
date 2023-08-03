@@ -22,9 +22,14 @@ function getRandomHexColor(event) {
   body.style.backgroundColor =
     `#${Math.floor(Math.random() * 16777215)
     .toString(16)
+      .padStart(6, 0)}`;
+  
+  color.textContent =
+    `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
     .padStart(6, 0)}`;
   
-  color.textContent = body.style.backgroundColor
+  // color.textContent = body.style.backgroundColor
 }
 
 changeColor.addEventListener("click", getRandomHexColor);

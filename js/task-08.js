@@ -29,7 +29,9 @@ form.addEventListener("submit", (event) => {
     alert("Пожалуйста, заполните все поля формы!");
     }
     
-    console.log(`Email: ${email.value}, Password: ${password.value}`);
-  
+    const user = { email: email.value, password: password.value,};
+    
+    console.log(user);
+
     event.currentTarget.reset();
 });
