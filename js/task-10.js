@@ -40,26 +40,25 @@ console.log(controls);
 console.log(btnCreate);
 console.log(btnDestroy);
 console.log(input);
+console.log(input.value);
 console.log(boxes);
 
-// function createBoxes(amount) {
-//   boxes.insertAdjacentHTML("beforeend", markup);
-//   boxes.append(markup)
-// };
-
-  // const amount = input.value;
 
 function createBoxes(amount) {
-  console.log(input.value);
-
+let size = 30;
+  const sizeStep = 10;
   let markup = "";
-  for (let i = 0; i < input.value; i += 1) {
-    markup += `<div id="box" class="box"></div>`
-  }
-  // const box = document.querySelector("#box");
-  // console.log(box);
+    for (let i = 0; i < input.value; i += 1) {
+      const bgColor = getRandomHexColor();
+      markup += `<div style="width:${size}px; height:${size}px; background-color: ${bgColor}; margin:10px;"></div>\n`;
+      size += sizeStep;
+    }
 
   boxes.innerHTML += markup
+}
+
+function removeBoxes() {
+  boxes.innerHTML = ``
 }
 
 function inputValue() {
@@ -74,6 +73,8 @@ function getRandomHexColor() {
 
 input.addEventListener("input", inputValue);
 btnCreate.addEventListener("click", createBoxes);
+btnDestroy.addEventListener("click", removeBoxes);
+
 
 // const markup = boxes.insertAdjacentHTML("afterbegin", );
 

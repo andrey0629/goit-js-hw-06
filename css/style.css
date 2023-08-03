@@ -17,8 +17,8 @@
 }
 
 .box {
-    width: 30px;
-    height: 30px;
+    /* width: 30px;
+    height: 30px; */
     line-height: 0px;
     text-align: center;
     display: inline-block;
@@ -28,6 +28,8 @@
     vertical-align: middle;
     transition: background .1s;
     background-color: aquamarine;
+    display: flex;
+        flex-wrap: wrap;
 }
 
 .item:hover {
