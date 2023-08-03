@@ -47,15 +47,24 @@ console.log(boxes);
 //   boxes.append(markup)
 // };
 
-const markup = `<div id="box" class="box"></div>`;
-
+  // const amount = input.value;
 
 function createBoxes(amount) {
-  const box = document.querySelector("#box");
-console.log(box);
-  boxes.innerHTML += markup;
-  getRandomHexColor(box)
-};
+  console.log(input.value);
+
+  let markup = "";
+  for (let i = 0; i < input.value; i += 1) {
+    markup += `<div id="box" class="box"></div>`
+  }
+  // const box = document.querySelector("#box");
+  // console.log(box);
+
+  boxes.innerHTML += markup
+}
+
+function inputValue() {
+  const amount = input.value;
+}
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -63,11 +72,10 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+input.addEventListener("input", inputValue);
 btnCreate.addEventListener("click", createBoxes);
 
 // const markup = boxes.insertAdjacentHTML("afterbegin", );
-
-
 
 
 // markup.classList
